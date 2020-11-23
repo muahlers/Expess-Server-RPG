@@ -46,8 +46,8 @@ const io = require('socket.io')(server, {
   },
 });
 
-const gameManager = new GameManager(io);
-gameManager.setup();
+// const gameManager = new GameManager(io);
+// gameManager.setup();
 
 //
 const port = process.env.PORT || 3000; // Defino un Puerto a Usar por el Server.
