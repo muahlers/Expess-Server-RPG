@@ -3,7 +3,7 @@ const bodyParser = require('body-parser'); // Requiro Paquetes Body Parser en no
 const cors = require('cors'); // Requiro Paquetes de Cors en node_modules
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
-const passport = require('passport');
+//const passport = require('passport');
 
 /*
 // routes
@@ -13,7 +13,7 @@ import secureRoutes from './routes/secure';
 import GameManager from './gameManager/GameManager';
 */
 // Variables en Archivo .env
-require('dotenv').config();
+//require('dotenv').config();
 
 // setup mongo connections
 const uri = process.env.MONGO_CONNECTION_URL;
