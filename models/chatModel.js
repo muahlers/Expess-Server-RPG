@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 // Extraigo la clase Schema de mongoose
 const { Schema } = mongoose;
@@ -17,4 +17,4 @@ const ChatSchema = new Schema({
 
 const ChatModel = mongoose.model('chat', ChatSchema);
 
-module.exports = ChatModel;
+export default ChatModel;

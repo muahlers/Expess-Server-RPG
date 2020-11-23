@@ -1,7 +1,7 @@
-const PlayerModel = require('./PlayerModel');
-const Spawner = require('./Spawner');
-const levelData = require('../public/assets/level/large_level.json');
-const SpawnerType = require('./utils');
+import PlayerModel from './PlayerModel';
+import Spawner from './Spawner';
+import * as levelData from '../public/assets/level/large_level.json';
+import { SpawnerType } from './utils';
 
 export default class GameManager {
   constructor(io) {
