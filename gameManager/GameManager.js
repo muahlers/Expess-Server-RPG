@@ -1,7 +1,7 @@
-import PlayerModel from './PlayerModel';
-import Spawner from './Spawner';
-import * as levelData from '../public/assets/level/large_level.json';
-import { SpawnerType } from './utils';
+const PlayerModel = require('./PlayerModel');
+// const Spawner = require('./Spawner');
+// const '*' as levelData = require('../public/assets/level/large_level.json');
+// const { SpawnerType } = require('./utils');
 
 export default class GameManager {
   constructor(io) {
@@ -25,6 +25,7 @@ export default class GameManager {
   }
 
   parseMapData() { // Problemas en el traspaso del mapa!!
+    /*
     this.levelData = levelData;
     this.levelData.layers.forEach((layer) => {
       if (layer.name === 'player_locations') {
@@ -52,6 +53,7 @@ export default class GameManager {
         console.log(this.monsterLocations);
       }
     });
+    */
   }
 
   setupEventListener() {
@@ -103,6 +105,7 @@ export default class GameManager {
   }
 
   setupSpawners() {
+    /*
     const config = {
       spawnInterval: 3000,
       limit: 3,
@@ -137,6 +140,7 @@ export default class GameManager {
       );
       this.spawners[spawner.id] = spawner;
     });
+    */
   }
 
   // Funciones para Spawner.

@@ -5,12 +5,11 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
 
-
 // routes
 const routes = require('./routes/main');
 const passwordRoutes = require('./routes/password');
 const secureRoutes = require('./routes/secure');
-// const GameManager = require('./gameManager/GameManager');
+const GameManager = require('./gameManager/GameManager');
 
 // Variables en Archivo .env
 require('dotenv').config();
@@ -46,10 +45,10 @@ const io = require('socket.io')(server, {
     origin: process.env.CORS_ORIGIN,
   },
 });
-/*
+
 const gameManager = new GameManager(io);
 gameManager.setup();
-*/
+
 //
 const port = process.env.PORT || 3000; // Defino un Puerto a Usar por el Server.
 
