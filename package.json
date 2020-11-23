@@ -1,0 +1,49 @@
+{
+  "name": "nodeserver-express",
+  "version": "1.0.0",
+  "description": "Server Js in Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "nodemon": "npx nodemon index.js --exec babel-node",
+    "lint": "npx eslint ./ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muahlers/NodeServer-Express.git"
+  },
+  "keywords": [
+    "Express Node Server"
+  ],
+  "author": "Michael Ahlers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muahlers/NodeServer-Express/issues"
+  },
+  "homepage": "https://github.com/muahlers/NodeServer-Express#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.2.1",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.13",
+    "nodemailer": "^6.4.16",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  }
+}

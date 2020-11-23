@@ -1,0 +1,13 @@
+Routes:
+
+404  - Not Found
+500  - Internal Problem
+status
+
+signup
+login
+logout
+token
+forget password
+reset password
+App running
