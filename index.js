@@ -4,6 +4,7 @@ const cors = require('cors'); // Requiro Paquetes de Cors en node_modules
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const GameManager = require('./gameManager/GameManager');
 
 // routes
 const routes = require('./routes/main');
@@ -38,14 +39,31 @@ mongoose.connection.on('error', (error) => {
 
 // setup Express App
 const app = express(); // Abro una instancia Express y la llamo app!
+const server = require('http').createServer(app);
+const io = require('socket.io')(server, {
+  cors: {
+    origin: process.env.CORS_ORIGIN,
+  },
+});
+
+//const gameManager = new GameManager(io);
+//gameManager.setup();
+
 const port = process.env.PORT || 3000; // Defino un Puerto a Usar por el Server.
 
 // update Express Settings
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded.
 app.use(bodyParser.json()); // parse application/json
 app.use(cookieParser());
+
 // Allow requests from other servers.
-app.use(cors({ credentials: true, origin: process.env.CORS_ORIGIN }));
+app.use(cors(
+  {
+    credentials: true,
+    origin: process.env.CORS_ORIGIN,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  },
+));
 
 // require  passport autho
 require('./auth/auth');
