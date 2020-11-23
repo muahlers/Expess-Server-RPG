@@ -13,7 +13,7 @@ const secureRoutes = require('./routes/secure');
 // const GameManager = require('./gameManager/GameManager');
 
 // Variables en Archivo .env
-//require('dotenv').config();
+require('dotenv').config();
 
 // setup mongo connections
 const uri = process.env.MONGO_CONNECTION_URL;
