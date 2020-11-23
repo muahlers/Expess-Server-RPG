@@ -40,11 +40,12 @@ mongoose.connection.on('error', (error) => {
 // setup Express App
 const app = express(); // Abro una instancia Express y la llamo app!
 const server = require('http').createServer(app);
+/*
 const io = require('socket.io')(server, {
   cors: {
     origin: process.env.CORS_ORIGIN,
   },
-});
+}); */
 
 //const gameManager = new GameManager(io);
 //gameManager.setup();
@@ -95,7 +96,7 @@ app.use((error, request, response, next) => {
 // server start listening when bd connection is establish.
 mongoose.connection.on('connected', () => {
   console.log('connected to mongo');
-  app.listen(port, () => {
+  server.listen(port, () => {
     console.log(`Server is Running in Port: ${port}`);
   });
 });
