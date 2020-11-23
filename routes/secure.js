@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require('express');
 
-import ChatModel from '../models/chatModel';
+const ChatModel = require('../models/chatModel');
 // Creo una instancia de express para manejar rutas llamada Router.
 const router = express.Router();
 
@@ -15,4 +15,4 @@ router.post('/chat', async (request, response) => {
   }
 });
 
-export default router;
+module.expots = router;

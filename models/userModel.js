@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 // Extraigo la clase Schema de mongoose
 const { Schema } = mongoose;
@@ -44,4 +44,4 @@ UserSchema.methods.isValidPassword = async function (password) {
 
 const UserModel = mongoose.model('user', UserSchema);
 
-export default UserModel;
+module.exports = UserModel;

@@ -1,6 +1,6 @@
-import express from 'express';
-import passport from 'passport';
-import jwt from 'jsonwebtoken';
+const express = require('express');
+const passport = require('passport');
+const jwt = require('jsonwebtoken');
 
 const tokenList = {};
 
@@ -108,4 +108,4 @@ router.post('/token', (request, response) => {
   }
 });
 
-export default router;
+module.expots = router;

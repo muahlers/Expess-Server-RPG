@@ -1,8 +1,8 @@
-import passport from 'passport';
-import localStrategy from 'passport-local';
-import JwtStrategy from 'passport-jwt';
+const passport = require('passport');
+const localStrategy = require('passport-local');
+const JwtStrategy = require('passport-jwt');
 
-import UserModel from '../models/userModel';
+const UserModel = require('../models/userModel');
 
 // handler user registration
 passport.use('signup', new localStrategy.Strategy({

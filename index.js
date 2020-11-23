@@ -3,15 +3,15 @@ const bodyParser = require('body-parser'); // Requiro Paquetes Body Parser en no
 const cors = require('cors'); // Requiro Paquetes de Cors en node_modules
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
-//const passport = require('passport');
+const passport = require('passport');
 
-/*
+
 // routes
-import routes from './routes/main';
-import passwordRoutes from './routes/password';
-import secureRoutes from './routes/secure';
-import GameManager from './gameManager/GameManager';
-*/
+const routes = require('./routes/main');
+const passwordRoutes = require('./routes/password');
+const secureRoutes = require('./routes/secure');
+// const GameManager = require('./gameManager/GameManager');
+
 // Variables en Archivo .env
 //require('dotenv').config();
 
@@ -66,7 +66,7 @@ app.use(cors(
     allowedHeaders: ['Content-Type', 'Authorization'],
   },
 ));
-/*
+
 // require  passport autho
 require('./auth/auth');
 
@@ -86,7 +86,6 @@ app.use('/', passport.authenticate('jwt', { session: false }), secureRoutes);
 app.get('/game.html', passport.authenticate('jwt', { session: false }), (request, response) => {
   response.status(200).json(request.user);
 });
-*/
 
 // Catch all other routes. Use() catch all that wasn't catch by the upper code.
 app.use((request, response) => {

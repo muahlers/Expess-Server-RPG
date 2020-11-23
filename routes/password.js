@@ -1,10 +1,10 @@
-import express from 'express';
-import nodemailer from 'nodemailer';
-import hbs from 'nodemailer-express-handlebars';
-import path from 'path';
-import crypto from 'crypto';
+const express = require('express');
+const nodemailer = require('nodemailer');
+const hbs = require('nodemailer-express-handlebars');
+const path = require('path');
+const crypto = require('crypto');
 
-import UserModel from '../models/userModel';
+const UserModel = require('../models/userModel');
 
 // Configuro Email Sender
 const email = process.env.EMAIL_ACCOUNT;
@@ -126,4 +126,4 @@ router.post('/reset-password', async (request, response, done) => {
   }
 });
 
-export default router;
+module.expots = router;
