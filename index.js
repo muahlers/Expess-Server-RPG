@@ -4,7 +4,7 @@ const cors = require('cors'); // Requiro Paquetes de Cors en node_modules
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
-const GameManager = require('./gameManager/GameManager');
+// const GameManager = require('./gameManager/GameManager');
 
 // routes
 const routes = require('./routes/main');
