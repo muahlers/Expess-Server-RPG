@@ -126,4 +126,4 @@ router.post('/reset-password', async (request, response, done) => {
   }
 });
 
-module.expots = router;
+module.exports = router;

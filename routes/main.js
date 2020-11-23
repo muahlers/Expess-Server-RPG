@@ -108,4 +108,4 @@ router.post('/token', (request, response) => {
   }
 });
 
-module.expots = router;
+module.exports = router;

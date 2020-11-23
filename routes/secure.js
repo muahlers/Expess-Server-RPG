@@ -15,4 +15,4 @@ router.post('/chat', async (request, response) => {
   }
 });
 
-module.expots = router;
+module.exports = router;
